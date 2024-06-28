@@ -229,6 +229,7 @@
         "name": "수학1",
         "count": 4,
         "examRate": 0.3,
+        "time": 2,
         "isPF": false,
         "list": [
             {"value": 0, "rate": 0.3, "maxPoint": 100, "name": "1회고사(30%)"},
@@ -242,6 +243,7 @@
         "name": "수학 Ⅱ",
         "count": 5,
         "examRate": 0.3,
+        "time": 3,
         "isPF": false,
         "list": [
             {"value": 0, "rate": 0.3, "maxPoint": 100, "name": "1회고사(30%)"},
@@ -256,6 +258,7 @@
         "name": "물리학 및 실험 Ⅰ",
         "count": 6,
         "examRate": 0.3,
+        "time": 3,
         "isPF": false,
         "list": [
             {"value": 0, "rate": 0.3, "maxPoint": 100, "name": "1회고사(30%)"},
@@ -271,6 +274,7 @@
         "name": "화학 및 실험 Ⅰ",
         "count": 8,
         "examRate": 0.3,
+        "time": 3,
         "isPF": false,
         "list": [
             {"value": 0, "rate": 0.3, "maxPoint": 100, "name": "1회고사(30%)"},
@@ -288,6 +292,7 @@
         "name": "생명과학 및 실험 Ⅰ",
         "count": 4,
         "examRate": 0.3,
+        "time": 3,
         "isPF": false,
         "list": [
             {"value": 0, "rate": 0.3, "maxPoint": 100, "name": "1회고사(30%)"},
@@ -301,6 +306,7 @@
         "name": "지구과학 및 실험 Ⅰ",
         "count": 4,
         "examRate": 0.3,
+        "time": 3,
         "isPF": false,
         "list": [
             {"value": 0, "rate": 0.3, "maxPoint": 100, "name": "1회고사(30%)"},
@@ -314,6 +320,7 @@
         "name": "정보과학개론",
         "count": 6,
         "examRate": 0.25,
+        "time": 3,
         "isPF": false,
         "list": [
             {"value": 0, "rate": 0.25, "maxPoint": 100, "name": "1회고사(25%)"},
@@ -329,6 +336,7 @@
         "name": "한국사 Ⅰ",
         "count": 5,
         "examRate": 0.35,
+        "time": 2,
         "isPF": false,
         "list": [
             {"value": 0, "rate": 0.35, "maxPoint": 100, "name": "2회고사(35%)"},
@@ -343,6 +351,7 @@
         "name": "영어 Ⅰ",
         "count": 5,
         "examRate": 0.4,
+        "time": 3,
         "isPF": false,
         "list": [
             {"value": 0, "rate": 0.4, "maxPoint": 100, "name": "2회고사(40%)"},
@@ -357,6 +366,7 @@
         "name": "국어 Ⅰ",
         "count": 4,
         "examRate": 0,
+        "time": 3,
         "isPF": false,
         "list": [
             {"value": 0, "rate": 1, "maxPoint": 30, "name": "우리글 바로 쓰기"},
@@ -370,6 +380,7 @@
         "name": "음악",
         "count": 3,
         "examRate": 0,
+        "time": 2,
         "isPF": false,
         "list": [
             {"value": 0, "rate": 1, "maxPoint": 35, "name": "노래 부르기"},
@@ -382,6 +393,7 @@
         "name": "체육 Ⅰ",
         "count": 4,
         "examRate": 0,
+        "time": 1,
         "isPF": true,
         "list": [
             {"value": 0, "rate": 1, "maxPoint": 20, "name": "건강영역"},
@@ -486,11 +498,12 @@
 
         function updateCredit() {
             creditSum = 0;
+            totTime = 0;
             for(i in data) {
-                creditSum += data[i].credit;
-                console.log(data[i].credit)
+                creditSum += data[i].credit * data[i].time;
+                totTime += data[i].time
             }
-            allCreditEl.innerHTML = `${creditSum/11}점`
+            allCreditEl.innerHTML = `${creditSum/totTime}점`
         }
     </script>
 </body>
