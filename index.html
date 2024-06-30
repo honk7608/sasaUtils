@@ -53,7 +53,7 @@
             <div id="curCreditEl">
                 0
             </div>
-            <div class="index" style="grid-column-start: 1; grid-column-end: 3;">
+            <div class="index" style="grid-column-start: 1; grid-column-end: 3; border-top: var(--text-color) 1px solid; padding-top: 1vw;">
                 <select id="goalSelect" oninput="updateFunc(-1)">
                     <option value="90">A+</option>
                     <option value="85">A0</option>
@@ -72,9 +72,9 @@
             <div id="calResult1">원점수 ?점</div>
             <div id="calResult2">지필고사 ?점</div>
         </div>
-        <div class="inputGrid" id="inputGrid">
+        <div class="inputGrid" id="inputGrid" style="grid-area: input;">
         </div>
-        <div class="InfoGrid">
+        <div class="InfoGrid" style="grid-area: info;">
             <h1 class="title">원점수, 성적 등급과 평점 표</h1>
             <div class="overFlowDiv">
                 <table class="pointLev">

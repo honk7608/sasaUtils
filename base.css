@@ -1,3 +1,23 @@
+/* palette */
+
+@media (prefers-color-scheme: light) {
+    * {
+        --text-color: black;
+        --bg-color: white;
+        --box-color: #eaf1f9;
+        --head-color: #013B84;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    * {
+        --text-color: white;
+        --bg-color: #010e1e;
+        --box-color: #001a39;
+        --head-color: #010e1e;
+    }
+}
+
 /* base */
 
 * {
@@ -70,5 +90,12 @@ header a {
 @media (prefers-color-scheme: dark) {
     header {
         border-bottom: 1px solid white;
+    }
+}
+
+@media screen and (max-width: 600px){
+    main > div {
+        width: auto;
+        height: calc(100% - 4vw);
     }
 }

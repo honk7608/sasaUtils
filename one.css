@@ -1,0 +1,15 @@
+/* mobile */
+
+@media screen and (max-width: 600px){
+    main {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: 
+        'head head'
+        'res input'
+        'info info';
+    }
+    main > .InfoGrid {
+        width: 96vw;
+    }
+}
