@@ -1,0 +1,78 @@
+/** resultGrid */
+.resultGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 2vw;
+    gap: 1vw;
+}
+.resultGrid > * {
+    text-align: center;
+}
+.resultGrid .index, #calResult1, #calResult2 {
+    font-weight: 700;
+}
+.resultGrid select {
+    font-size: inherit;
+    font-weight: inherit;
+    text-align: center;
+
+    border: none;
+    outline: none;
+}
+.resultGrid option {
+    font-size: 1vw;
+}
+.resultGrid > input {
+    border: none;
+    outline: none;
+    font-weight: inherit;
+    font-size: inherit;
+    background-color: var(--bg-color);
+}
+
+/** inputGrid */
+.inputGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vw;
+}
+.inputGrid > * {
+    width: 100%;
+    text-align: center;
+    font-size: 2vw;
+}
+.inputGrid input {
+    font-weight: inherit;
+
+    border: none;
+    outline: none;        
+}
+.inputGrid .inputHead {
+    font-weight: 700;
+}
+
+/** InfoDiv */
+.InfoGrid .title {
+    font-size: 2vw;
+}
+.overFlowDiv {
+    overflow: scroll hidden;
+}
+.pointLev {
+    width: max-content;
+    
+    text-align: center;
+
+    font-size: 2vw;
+    font-weight: 500;
+
+    border-collapse: collapse;
+}
+.pointLev td {
+    width: max-content;
+    padding: 1vw;
+    border-right: var(--text-color) 1px solid;
+}
+.pointLev td:last-child {
+    border: none;
+}
