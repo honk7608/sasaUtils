@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>평점 계산기</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./calc.css">
+</head>
+<body>
+    <main>
+        <header style="grid-area: head;">
+            <div class="title">SASA 10th 평점 계산기(24-1)</div>
+            <div class="menu">
+                <a href="./index.html">과목별 평점 계산기</a>/
+                <a href="./all.html">평균 평점 계산기</a>
+            </div>
+        </header>
+        <div class="resultGrid allResGrid" style="grid-area: res;">
+            <div class="index">전체 평점 평균</div>
+            <div class="index" id="allCredit">4.3점</div>
+            <div style="font-size: 1vw; font-weight: 500; grid-column-start: 1; grid-column-end: 3;">작성한 기록은 새로고침을 하거나 다른 페이지로 이동하면 초기화됩니다.</div>
+        </div>
+        <div class="inputGrid" id="inputGrid" style="grid-area: input;">
+            <select id="creditSelect" oninput="updateFunc()">
+                <option value="4.3">A+</option>
+                <option value="4.0">A0</option>
+                <option value="3.7">A-</option>
+                <option value="3.3">B+</option>
+                <option value="3.0">B0</option>
+                <option value="2.7">B-</option>
+                <option value="2.3">C+</option>
+                <option value="2.0">C0</option>
+                <option value="1.7">C-</option>
+                <option value="1.3">D+</option>
+                <option value="1.0">D0</option>
+                <option value="0.7">D-</option>
+                <option value="0.0">F</option>
+            </select>
+        </div>
+        <div class="InfoGrid wide" style="grid-area: info;">
+            <h1 class="title">원점수, 성적 등급과 평점 표</h1>
+            <div class="overFlowDiv">
+                <table class="pointLev">
+                    <tbody>
+                        <tr>
+                            <td>원점수</td>
+                            <td>90 ~ 100</td>
+                            <td>85 ~ 90</td>
+                            <td>80 ~ 85</td>
+                            <td>75 ~ 80</td>
+                            <td>70 ~ 75</td>
+                            <td>65 ~ 70</td>
+                            <td>60 ~ 65</td>
+                            <td>55 ~ 60</td>
+                            <td>50 ~ 55</td>
+                            <td>45 ~ 50</td>
+                            <td>40 ~ 45</td>
+                            <td>35 ~ 40</td>
+                            <td>~ 35</td>
+                        </tr>
+                        <tr>
+                            <td>성적 등급</td>
+                            <td>A+</td>
+                            <td>A0</td>
+                            <td>A-</td>
+                            <td>B+</td>
+                            <td>B0</td>
+                            <td>B-</td>
+                            <td>C+</td>
+                            <td>C0</td>
+                            <td>C-</td>
+                            <td>D+</td>
+                            <td>D0</td>
+                            <td>D-</td>
+                            <td>F</td>
+                        </tr>
+                        <tr>
+                            <td>평점</td>
+                            <td>4.3</td>
+                            <td>4.0</td>
+                            <td>3.7</td>
+                            <td>3.3</td>
+                            <td>3.0</td>
+                            <td>2.7</td>
+                            <td>2.3</td>
+                            <td>2.0</td>
+                            <td>1.7</td>
+                            <td>1.3</td>
+                            <td>1.0</td>
+                            <td>0.7</td>
+                            <td>0.0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="InfoGrid mobile" style="grid-area: info;">
+            <h1 class="title">원점수, 성적 등급과 평점 표</h1>
+            <div class="overFlowDiv">
+                <table class="pointLev">
+                    <tbody>
+                        <tr>
+                            <td>원점수</td>
+                            <td>성적 등급</td>
+                            <td>학점</td>
+                        </tr>
+                        <tr>
+                            <td>90 ~ 100</td>
+                            <td>A+</td>
+                            <td>4.3</td>
+                        </tr>
+                        <tr>
+                            <td>85 ~ 90</td>
+                            <td>A0</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>80 ~ 85</td>
+                            <td>A-</td>
+                            <td>3.7</td>
+                        </tr>
+                        <tr>
+                            <td>75 ~ 80</td>
+                            <td>B+</td>
+                            <td>3.3</td>
+                        </tr>
+                        <tr>
+                            <td>70 ~ 75</td>
+                            <td>B0</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>65 ~ 70</td>
+                            <td>B-</td>
+                            <td>2.7</td>
+                        </tr>
+                        <tr>
+                            <td>60 ~ 65</td>
+                            <td>C+</td>
+                            <td>2.3</td>
+                        </tr>
+                        <tr>
+                            <td>55 ~ 60</td>
+                            <td>C0</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>50 ~ 55</td>
+                            <td>C-</td>
+                            <td>1.7</td>
+                        </tr>
+                        <tr>
+                            <td>45 ~ 50</td>
+                            <td>D+</td>
+                            <td>1.3</td>
+                        </tr>
+                        <tr>
+                            <td>40 ~ 45</td>
+                            <td>D0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>35 ~ 40</td>
+                            <td>D-</td>
+                            <td>0.7</td>
+                        </tr>
+                        <tr>
+                            <td>~ 35</td>
+                            <td>F</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="./subjdata.js"></script>
+    <script src="./allcalc.js"></script>
+</body>
+</html>

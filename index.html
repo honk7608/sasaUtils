@@ -11,13 +11,14 @@
 </head>
 <body>
     <main>
-        <a href="../index.html ">SASA 10th 평점 계산기(24-1)</a>
-        <div class="resultGrid">
-            <div class="index" style="grid-column-start: 1; grid-column-end: 3;">전체 평점 평균 확인하기</div>
-            <div class="index" id="allCredit">0점</div>
-            <input type="submit" value="입력한 내용 적용하기" onclick="updateCredit()">
-        </div>
-        <div class="resultGrid">
+        <header style="grid-area: head;">
+            <div class="title">SASA 10th 평점 계산기(24-1)</div>
+            <div class="menu">
+                <a href="./index.html">과목별 평점 계산기</a>/
+                <a href="./all.html">평균 평점 계산기</a>
+            </div>
+        </header>
+        <div class="resultGrid resultGrid" style="grid-area: res;">
             <div class="index" style="grid-column-start: 1; grid-column-end: 3;">〈 
             <select oninput="resetSubj()" id="subjSelect">
                 <option value="math1">수학 Ⅰ</option>
