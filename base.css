@@ -26,14 +26,23 @@
     font-family: "Pretendard";
     box-sizing: border-box;
 }
-* input, * select {
-    color: var(--text-color);
-    background-color: var(--bg-color);
-}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+* input, * select, * option {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+
+    font-size: inherit;
+    font-weight: inherit;
+    text-align: center;
+
+    border: none;
+    outline: none;
 }
 
 body {

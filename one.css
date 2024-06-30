@@ -3,13 +3,13 @@
 @media screen and (max-width: 600px){
     main {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas: 
         'head head'
         'res input'
         'info info';
     }
-    main > .InfoGrid {
-        width: 96vw;
+    main > .resultGrid, main > .inputGrid {
+        width: 46vw;
     }
 }

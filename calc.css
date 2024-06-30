@@ -11,29 +11,11 @@
 .resultGrid .index, #calResult1, #calResult2 {
     font-weight: 700;
 }
-.resultGrid select {
-    font-size: inherit;
-    font-weight: inherit;
-    text-align: center;
-
-    border: none;
-    outline: none;
-}
-.resultGrid option {
-    font-size: 1vw;
-}
-.resultGrid > input {
-    border: none;
-    outline: none;
-    font-weight: inherit;
-    font-size: inherit;
-    background-color: var(--bg-color);
-}
 
 /** inputGrid */
 .inputGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
     gap: 1vw;
 }
 .inputGrid > * {
